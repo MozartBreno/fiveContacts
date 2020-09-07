@@ -1,0 +1,35 @@
+<!-- Header -->
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <!-- Back To Landing Page -->
+    <ion-buttons slot="start">
+      <ion-back-button color="color1" default-href="" text="" icon="arrow-back" routerLink="/landing"
+        routerDirection="root">
+      </ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<!-- Contents -->
+<ion-content fullscreen>
+    <h1>Inscrever-se</h1>
+
+  <div class="ion-padding">
+    <form class="ion-padding" #form="ngForm" (ngSubmit)="onSubmit(form)">
+     
+      <ion-input type="text" placeholder="Nome" [(ngModel)]="objeto.nome" name="nome" #nome="ngModel" required
+        maxlength="200"></ion-input>
+
+    
+      <ion-input type="email" placeholder="Email" [(ngModel)]="objeto.email" name="email" #email="ngModel" required
+        email maxlength="300"></ion-input>
+
+      <ion-input type="password" placeholder="Senha" [(ngModel)]="objeto.senha" name="senha" #senha="ngModel"
+        minlength="6" required></ion-input>
+
+      <ion-button type="submit">
+        <ion-text> cadastrar </ion-text>
+      </ion-button>
+    </form>
+  </div>
+</ion-content>
